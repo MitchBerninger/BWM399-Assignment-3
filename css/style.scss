@@ -1,0 +1,131 @@
+//Import other CSS
+@import 'bootstrap.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700,300';
+
+// Variables
+$navColor: #333;
+$accentColor: #ff8f1c;
+$fontStack: 'Lato', sans-serif;
+  
+//Font Family
+body, .tooltip, .popup{font-family: $fontStack;}
+//Nav
+.navbar-inverse{background-color: $navColor;}
+.navbar-inverse .navbar-nav li a{color: white;}
+.navbar-inverse .navbar-brand{color: white;}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus{
+  color: white;
+  background-color:$accentColor;}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: $accentColor;
+  background-color: transparent;}
+.navbar-inverse .navbar-nav .dropdown-menu li a{color:black;}
+.navbar-nav > li > .dropdown-menu{margin-top: -1px;}
+.navbar-inverse .navbar-toggle{background-color: $accentColor;
+border-color: white;}
+.navbar-fixed-top{border-width: 0;}
+.navbar-brand img {height: 45px;
+                    margin-top: -15px;}
+//Jumbotron
+.jumbotron {padding-top: 166px;
+            padding-bottom: 66px;
+            margin-bottom: 66px;
+            background: linear-gradient( rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33) ), url(../images/colin.jpg) no-repeat center;
+            background-size: cover;
+            background-position: 0 13%;
+            color: white;
+            //text-shadow: black 0.1em 0.1em 0.1em;
+
+    h1{margin:1.5em 0 0 0;}
+    h2{margin-top:0;}
+}
+
+
+//Buttons
+.btn-primary,.btn-primary:focus{background-color: $navColor;
+             border-color:$navColor;}
+.btn-primary:hover, .btn-primary:active:focus{background-color: $accentColor;
+             border-color:$accentColor;}
+//Pannel3
+.pannel3{background-color: $accentColor;
+        padding:40px 0;
+        color: white;
+
+ul li{font-size: 1.5em;
+    line-height: 2em;
+    list-style: none;}
+
+span{padding-right: 10px;}
+}
+.thumbnail{border: 0;}
+//paragraphBlock
+.paragraphBlock p{font-size: 1.66em;
+                  line-height: 2em;}
+.paragraphBox{width:87%;
+              margin: auto;
+              padding: 40px 0;
+    .btn{
+        font-size: 1.66em;
+        width: 80%;
+    }
+    .largeBtn p{text-align: center;}
+
+}
+//Title Bar
+#titleBar{background-color: $accentColor;
+        color:white;
+        margin:50px 0 0 0;
+        padding: 0;
+        height: 80px;}
+
+//Alumni Newsletter
+.list-group{margin-top: 33px;}
+.list-group-item.active .badge{color: white;
+                               background-color: $accentColor;}
+.list-group-item.active:focus .badge{background-color: $navColor;}
+.list-group-item.active:hover .badge{background-color: $navColor;}
+.list-group-item.active{background-color: $navColor;
+                        border-color: $navColor;}
+.list-group-item.active:hover,.list-group-item.active:focus{background-color: $accentColor;
+                                                            border-color: $accentColor;}
+#newsletter{margin-bottom: 20px;}
+#newsletter .textBox p:first-child:first-letter {float: left;
+                                        color: black;
+                                        font-size: 66px;
+                                        line-height: 50px;
+                                        padding-top: 4px;
+                                        padding-right: 8px;
+                                        padding-left: 3px;}
+
+.textBox p{line-height: 2em;}
+.textBox a{color:$accentColor;}
+.signature p{margin: 0;}
+
+
+//Footer
+.footer{background-color: #333;
+        color: white;
+        padding: 30px 0 20px;
+    
+    li{float: left;
+        padding: 0 10px;
+        list-style: none;}
+    a{color: white;}
+    a:hover{color: $accentColor;
+            text-decoration: none;}
+    p{text-align: center;
+    margin-bottom: 0;}
+}
+//Alert Box
+.progress{margin-top: 20px;}
+
+//Media Queries
+@media screen and (max-width: 768px){
+    .footer p{float: none;}
+    .jumbotron{background-position: 66% 0;}
+    .paragraphBox .btn{font-size: 1em;}
+    .paragraphBlock p{font-size:1.2em;}
+}
