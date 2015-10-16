@@ -2,6 +2,8 @@
 @import 'bootstrap.css';
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700,300';
+@import 'lightbox/main.css';
+@import 'lightbox/magnific-popup.css';
 
 // Variables
 $navColor: #333;
@@ -49,9 +51,9 @@ border-color: white;}
              border-color:$navColor;}
 .btn-primary:hover, .btn-primary:active:focus{background-color: $accentColor;
              border-color:$accentColor;}
-//Pannel3
-.pannel3{background-color: $accentColor;
-        padding:40px 0;
+//Accent Box
+.accentBox{background-color: $accentColor;
+        
         color: white;
 
 ul li{font-size: 1.5em;
@@ -81,7 +83,67 @@ span{padding-right: 10px;}
         padding: 0;
         height: 80px;}
 
+//Index
+.helmet{background: url(../images/helmet.png) no-repeat right;
+  //  background-size: cover;
+    background-size: 50%;
+    background-position: 117% 33%;}
+.offer{margin-left:75px;
+        padding: 20px 0;}
+
+//Why Us
+.why{
+    line-height: 1.66em;
+    #creed{padding-bottom: 20px;
+        .nav a{color:$navColor;}
+        .nav .active a{background-color: $navColor;
+                        color:white;
+                        border: 1px solid $navColor;}
+    }
+    .tab-pane{padding: 20px 10px;
+            background-color: $navColor;
+        color:white;
+    }
+    .panel-heading{background-color: $navColor;
+                color: white;}
+    img{width: 100%;
+        margin-bottom: 33px;}
+}
+//Brotherhood
+.brotherhood{
+    .parabox{text-align: center;
+            padding: 33px 0;
+            width: 75%;
+            margin:auto;
+        h4{line-height: 1.8em;}        
+    }
+    .subBox{margin: 40px 0;
+        img{width:100%;}
+    }
+    .fact{padding:75px 0 66px;
+        text-align: center;
+        
+        h1{font-size: 5em;}
+        h2{margin: 0;
+            letter-spacing: 2px;}
+    }
+    .factside {margin-top:7%;
+                text-align: center;
+        .btn-side{margin-top: 20px;
+            width: 66%;}
+    }
+    .modal-title{color: black;}
+}
+.fullimgbox{background: linear-gradient( rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33) ), url(../images/funnybros.JPG) no-repeat center;
+    background-size: cover;
+    background-position: 0% 33%;
+            height: 400px;
+            color: white;
+        }
+
+
 //Alumni Newsletter
+#newsletter{
 .list-group{margin-top: 33px;}
 .list-group-item.active .badge{color: white;
                                background-color: $accentColor;}
@@ -92,7 +154,7 @@ span{padding-right: 10px;}
 .list-group-item.active:hover,.list-group-item.active:focus{background-color: $accentColor;
                                                             border-color: $accentColor;}
 #newsletter{margin-bottom: 20px;}
-#newsletter .textBox p:first-child:first-letter {float: left;
+.textBox p:first-child:first-letter {float: left;
                                         color: black;
                                         font-size: 66px;
                                         line-height: 50px;
@@ -102,7 +164,38 @@ span{padding-right: 10px;}
 
 .textBox p{line-height: 2em;}
 .textBox a{color:$accentColor;}
-.signature p{margin: 0;}
+.signature{margin-bottom: 33px; 
+    p{margin: 0;}
+    }
+}
+//Connect
+.connect{
+    .smwidget{padding: 20px 0;}
+    
+    .address{line-height: 1.66em;
+        a{color:black;}
+    }
+    .location{margin-top: 20px;}
+    .contactBox{line-height: .66em;
+        a{color:black;}}
+    .contact .btn-primary{margin:0 0 20px;}
+    /*
+    .smwidget .nav-tabs{background-color: $navColor;
+        a{color:white;}
+        .active{background-color: $accentColor;}
+    }*/
+    .nav a{color:$navColor;}
+    .nav .active a{background-color: $navColor;
+                        color:white;
+        border: 1px solid $navColor;}
+        .nav .active a:hover{background-color: $navColor;
+                        color:white;
+                        border: 1px solid $navColor;}
+        .nav .active a:focus{background-color: $navColor;
+                        color:white;
+                        border: 1px solid $navColor;}
+    
+}
 
 
 //Footer
@@ -119,13 +212,56 @@ span{padding-right: 10px;}
     p{text-align: center;
     margin-bottom: 0;}
 }
+//Lightbox
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
 //Alert Box
 .progress{margin-top: 20px;}
 
 //Media Queries
 @media screen and (max-width: 768px){
-    .footer p{float: none;}
+    .footer {text-align: center;
+        margin: auto;
+        p{float: none;}
+    }
     .jumbotron{background-position: 66% 0;}
     .paragraphBox .btn{font-size: 1em;}
     .paragraphBlock p{font-size:1.2em;}
+    .brotherhood .fact {padding:20px 0 15px;
+        h1{font-size:2em;}
+    }
 }

@@ -1,6 +1,8 @@
 @import url(bootstrap.css);
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700,300';
+@import url(lightbox/main.css);
+@import url(lightbox/magnific-popup.css);
 body, .tooltip, .popup {
   font-family: "Lato", sans-serif;
 }
@@ -79,19 +81,18 @@ body, .tooltip, .popup {
   border-color: #ff8f1c;
 }
 
-.pannel3 {
+.accentBox {
   background-color: #ff8f1c;
-  padding: 40px 0;
   color: white;
 }
 
-.pannel3 ul li {
+.accentBox ul li {
   font-size: 1.5em;
   line-height: 2em;
   list-style: none;
 }
 
-.pannel3 span {
+.accentBox span {
   padding-right: 10px;
 }
 
@@ -127,34 +128,134 @@ body, .tooltip, .popup {
   height: 80px;
 }
 
-.list-group {
+.helmet {
+  background: url(../images/helmet.png) no-repeat right;
+  background-size: 50%;
+  background-position: 117% 33%;
+}
+
+.offer {
+  margin-left: 75px;
+  padding: 20px 0;
+}
+
+.why {
+  line-height: 1.66em;
+}
+
+.why #creed {
+  padding-bottom: 20px;
+}
+
+.why #creed .nav a {
+  color: #333;
+}
+
+.why #creed .nav .active a {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
+.why .tab-pane {
+  padding: 20px 10px;
+  background-color: #333;
+  color: white;
+}
+
+.why .panel-heading {
+  background-color: #333;
+  color: white;
+}
+
+.why img {
+  width: 100%;
+  margin-bottom: 33px;
+}
+
+.brotherhood .parabox {
+  text-align: center;
+  padding: 33px 0;
+  width: 75%;
+  margin: auto;
+}
+
+.brotherhood .parabox h4 {
+  line-height: 1.8em;
+}
+
+.brotherhood .subBox {
+  margin: 40px 0;
+}
+
+.brotherhood .subBox img {
+  width: 100%;
+}
+
+.brotherhood .fact {
+  padding: 75px 0 66px;
+  text-align: center;
+}
+
+.brotherhood .fact h1 {
+  font-size: 5em;
+}
+
+.brotherhood .fact h2 {
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.brotherhood .factside {
+  margin-top: 7%;
+  text-align: center;
+}
+
+.brotherhood .factside .btn-side {
+  margin-top: 20px;
+  width: 66%;
+}
+
+.brotherhood .modal-title {
+  color: black;
+}
+
+.fullimgbox {
+  background: linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url(../images/funnybros.JPG) no-repeat center;
+  background-size: cover;
+  background-position: 0% 33%;
+  height: 400px;
+  color: white;
+}
+
+#newsletter .list-group {
   margin-top: 33px;
 }
 
-.list-group-item.active .badge {
+#newsletter .list-group-item.active .badge {
   color: white;
   background-color: #ff8f1c;
 }
 
-.list-group-item.active:focus .badge {
+#newsletter .list-group-item.active:focus .badge {
   background-color: #333;
 }
 
-.list-group-item.active:hover .badge {
+#newsletter .list-group-item.active:hover .badge {
   background-color: #333;
 }
 
-.list-group-item.active {
+#newsletter .list-group-item.active {
   background-color: #333;
   border-color: #333;
 }
 
-.list-group-item.active:hover, .list-group-item.active:focus {
+#newsletter .list-group-item.active:hover, #newsletter .list-group-item.active:focus {
   background-color: #ff8f1c;
   border-color: #ff8f1c;
 }
 
-#newsletter {
+#newsletter #newsletter {
   margin-bottom: 20px;
 }
 
@@ -168,16 +269,78 @@ body, .tooltip, .popup {
   padding-left: 3px;
 }
 
-.textBox p {
+#newsletter .textBox p {
   line-height: 2em;
 }
 
-.textBox a {
+#newsletter .textBox a {
   color: #ff8f1c;
 }
 
-.signature p {
+#newsletter .signature {
+  margin-bottom: 33px;
+}
+
+#newsletter .signature p {
   margin: 0;
+}
+
+.connect {
+  /*
+    .smwidget .nav-tabs{background-color: $navColor;
+        a{color:white;}
+        .active{background-color: $accentColor;}
+    }*/
+}
+
+.connect .smwidget {
+  padding: 20px 0;
+}
+
+.connect .address {
+  line-height: 1.66em;
+}
+
+.connect .address a {
+  color: black;
+}
+
+.connect .location {
+  margin-top: 20px;
+}
+
+.connect .contactBox {
+  line-height: .66em;
+}
+
+.connect .contactBox a {
+  color: black;
+}
+
+.connect .contact .btn-primary {
+  margin: 0 0 20px;
+}
+
+.connect .nav a {
+  color: #333;
+}
+
+.connect .nav .active a {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
+.connect .nav .active a:hover {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
+.connect .nav .active a:focus {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
 }
 
 .footer {
@@ -206,11 +369,54 @@ body, .tooltip, .popup {
   margin-bottom: 0;
 }
 
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+  padding: 0;
+}
+
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+  top: 0;
+  bottom: 0;
+}
+
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+  padding: 0;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
 .progress {
   margin-top: 20px;
 }
 
 @media screen and (max-width: 768px) {
+  .footer {
+    text-align: center;
+    margin: auto;
+  }
   .footer p {
     float: none;
   }
@@ -222,5 +428,11 @@ body, .tooltip, .popup {
   }
   .paragraphBlock p {
     font-size: 1.2em;
+  }
+  .brotherhood .fact {
+    padding: 20px 0 15px;
+  }
+  .brotherhood .fact h1 {
+    font-size: 2em;
   }
 }
